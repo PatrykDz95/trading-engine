@@ -27,6 +27,9 @@ type Order struct {
 	Type  OrderType
 	Price int64 // in ticks
 	Qty   int64 // remaining quantity
+
+	prev, next *Order
+	level      *priceLevel
 }
 
 type Trade struct {
